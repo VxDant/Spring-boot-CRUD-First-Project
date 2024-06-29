@@ -27,4 +27,9 @@ public class TodosService {
 
         return repository.findAll();
     }
+
+    public void deleteTodoByTitle(String title){
+
+         repository.deleteByTitle(title);
+    }
 }

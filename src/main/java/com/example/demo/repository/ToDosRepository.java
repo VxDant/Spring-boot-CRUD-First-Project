@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ToDosRepository extends MongoRepository<ToDos, String> {
 
 
+    void deleteByTitle(String title);
 }
