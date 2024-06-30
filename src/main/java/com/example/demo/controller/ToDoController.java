@@ -28,7 +28,7 @@ public class ToDoController {
         return  service.findAllToDos();
     }
 
-    @DeleteMapping("/delete/{name}")
+    @DeleteMapping("/delete/{title}")
     public ResponseEntity<Void> deleteUserByName(@PathVariable String title) {
         service.deleteTodoByTitle(title);
         return ResponseEntity.noContent().build();
