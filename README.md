@@ -1,4 +1,4 @@
-A basic srping boot project to develop rest api
-1. created model, repository, service and controller arhitecture
-2. added mongodb atlas
+Springboot REST API Practice by CRUD TODOs 
+1. Creating, deleting and getting the list of todos implemented
+2. used controller, dependency injection, service, repository in the architecture
 
