@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.data.model.ToDos;
+import com.example.demo.data.model.ToDo;
 import com.example.demo.repository.ToDosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class TodosService {
     @Autowired
     private ToDosRepository repository;
 
-    public ToDos addTodo(ToDos Todo){
+    public ToDo addTodo(ToDo Todo){
 
         id += 1;
 
@@ -23,8 +23,17 @@ public class TodosService {
         return repository.save(Todo);
     }
 
-    public List<ToDos> findAllToDos(){
+    public List<ToDo> findAllToDos(){
 
         return repository.findAll();
+    }
+
+    public String deleteTodo(String name){
+
+        repository.deleteTodoByTitle(name);
+
+        return "todo removed";
+
+
     }
 }
